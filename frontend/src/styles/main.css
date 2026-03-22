@@ -17,6 +17,9 @@ body {
   font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
   font-weight: 300;
   background-color: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 img {
@@ -44,11 +47,14 @@ ol {
 /* App */
 
 .app {
-  min-height: 100vh;
+  width: 320px;
+  height: 568px;
   padding: 20px 24px 40px;
   display: flex;
   flex-direction: column;
   align-items: center;
+  background-color: #fff;
+  overflow: hidden;
 }
 
 .app__title {
@@ -196,6 +202,8 @@ ol {
 
 @media (orientation: landscape) {
   .app {
+    width: 568px;
+    height: 320px;
     padding: 16px 24px 24px;
   }
 
