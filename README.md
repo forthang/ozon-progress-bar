@@ -9,7 +9,7 @@
 ![HTML5](https://img.shields.io/badge/HTML5-E34F26?logo=html5&logoColor=fff)
 ![GitHub Pages](https://img.shields.io/badge/GitHub%20Pages-222?logo=githubpages&logoColor=fff)
 
-Переиспользуемый компонент кругового прогресс-бара на чистом JavaScript без зависимостей.
+Переиспользуемый компонент кругового прогресс-бара на чистом JavaScript.
 
 **[Live Demo (Нажми)](https://forthang.github.io/ozon-progress-bar/)**
 
@@ -21,7 +21,7 @@
 - Анимация вращения по часовой стрелке
 - Скрытие/показ компонента
 - Адаптивная верстка (portrait / landscape)
-- Компонентная архитектура — легко переиспользовать
+- API. Переиспользование комопнента
 
 ## Быстрый старт
 
@@ -29,12 +29,6 @@
 cd frontend
 npm install
 npm start
-```
-
-Сборка:
-
-```bash
-npm run build
 ```
 
 ## Использование компонента
@@ -79,8 +73,3 @@ const bar1 = new ProgressBar(el1, { value: 25 });
 const bar2 = new ProgressBar(el2, { value: 50, animated: true });
 const bar3 = new ProgressBar(el3, { value: 100 });
 ```
-
-
-## Лицензия
-
-[MIT](LICENSE)

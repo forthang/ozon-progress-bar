@@ -94,12 +94,10 @@ ol {
   color: #333;
   outline: none;
   appearance: textfield;
-  appearance: textfield;
 }
 
 .control__input::-webkit-outer-spin-button,
 .control__input::-webkit-inner-spin-button {
-  appearance: none;
   appearance: none;
   margin: 0;
 }
