@@ -1,0 +1,33 @@
+.progress-ring {
+  width: 160px;
+  height: 160px;
+  border-radius: 50%;
+  background: conic-gradient(#e6e6e6 0deg, #e6e6e6 360deg);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.progress-ring__inner {
+  width: 82.5%;
+  height: 82.5%;
+  border-radius: 50%;
+  background: #fff;
+}
+
+.progress-ring--hidden {
+  visibility: hidden;
+}
+
+.progress-ring--animated {
+  animation: progress-ring-spin 2s linear infinite;
+}
+
+@keyframes progress-ring-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}

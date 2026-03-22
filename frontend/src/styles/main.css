@@ -67,42 +67,6 @@ ol {
   width: 100%;
 }
 
-/* Progress ring */
-
-.progress-ring {
-  width: 160px;
-  height: 160px;
-  border-radius: 50%;
-  background: conic-gradient(#005bff 0deg, #005bff 270deg, #e6e6e6 270deg, #e6e6e6 360deg);
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-.progress-ring__inner {
-  width: 132px;
-  height: 132px;
-  border-radius: 50%;
-  background: #fff;
-}
-
-.progress-ring--hidden {
-  visibility: hidden;
-}
-
-.progress-ring--animated {
-  animation: spin 2s linear infinite;
-}
-
-@keyframes spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
-}
-
 /* Controls */
 
 .app__controls {
