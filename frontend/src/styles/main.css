@@ -14,8 +14,8 @@ html {
 body {
   min-height: 100vh;
   line-height: 1.5;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen,
-    Ubuntu, Cantarell, 'Helvetica Neue', Arial, sans-serif;
+  font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  font-weight: 300;
   background-color: #fff;
 }
 
@@ -58,6 +58,15 @@ ol {
   margin-bottom: 48px;
 }
 
+.app__content {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+}
+
 /* Progress ring */
 
 .progress-ring {
@@ -75,6 +84,23 @@ ol {
   height: 132px;
   border-radius: 50%;
   background: #fff;
+}
+
+.progress-ring--hidden {
+  visibility: hidden;
+}
+
+.progress-ring--animated {
+  animation: spin 2s linear infinite;
+}
+
+@keyframes spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
 }
 
 /* Controls */
@@ -103,11 +129,13 @@ ol {
   font-weight: 600;
   color: #333;
   outline: none;
+  appearance: textfield;
   -moz-appearance: textfield;
 }
 
 .control__input::-webkit-outer-spin-button,
 .control__input::-webkit-inner-spin-button {
+  appearance: none;
   -webkit-appearance: none;
   margin: 0;
 }
@@ -162,4 +190,112 @@ ol {
 
 .control__checkbox:checked + .control__slider::before {
   transform: translateX(20px);
+}
+
+/* Tablet portrait */
+
+@media (min-width: 768px) and (orientation: portrait) {
+  .progress-ring {
+    width: 220px;
+    height: 220px;
+  }
+
+  .progress-ring__inner {
+    width: 182px;
+    height: 182px;
+  }
+
+  .app__title {
+    font-size: 20px;
+  }
+
+  .control__label {
+    font-size: 16px;
+  }
+
+  .control__input {
+    width: 56px;
+    height: 36px;
+    font-size: 16px;
+  }
+
+  .control__switch {
+    width: 52px;
+    height: 30px;
+  }
+
+  .control__slider::before {
+    height: 24px;
+    width: 24px;
+  }
+}
+
+/* Landscape */
+
+@media (orientation: landscape) {
+  .app {
+    padding: 16px 24px 24px;
+  }
+
+  .app__title {
+    margin-bottom: 0;
+  }
+
+  .app__content {
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 48px;
+  }
+
+  .app__controls {
+    margin-top: 0;
+  }
+
+  .progress-ring {
+    width: clamp(120px, 30vh, 200px);
+    height: clamp(120px, 30vh, 200px);
+  }
+
+  .progress-ring__inner {
+    width: 82.5%;
+    height: 82.5%;
+  }
+}
+
+/* Desktop */
+
+@media (min-width: 1024px) {
+  .app {
+    padding: 32px 48px 48px;
+  }
+
+  .app__title {
+    font-size: 22px;
+    margin-bottom: 0;
+  }
+
+  .progress-ring {
+    width: 240px;
+    height: 240px;
+  }
+
+  .progress-ring__inner {
+    width: 200px;
+    height: 200px;
+  }
+
+  .control__label {
+    font-size: 18px;
+  }
+
+  .control__input {
+    width: 60px;
+    height: 38px;
+    font-size: 18px;
+  }
+
+  .app__controls {
+    gap: 20px;
+  }
 }
