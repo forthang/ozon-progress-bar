@@ -16,10 +16,10 @@ body {
   line-height: 1.5;
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen,
     Ubuntu, Cantarell, 'Helvetica Neue', Arial, sans-serif;
+  background-color: #fff;
 }
 
-img,
-svg {
+img {
   display: block;
   max-width: 100%;
 }
@@ -39,4 +39,127 @@ a {
 ul,
 ol {
   list-style: none;
+}
+
+/* App */
+
+.app {
+  min-height: 100vh;
+  padding: 20px 24px 40px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.app__title {
+  align-self: flex-start;
+  font-size: 16px;
+  font-weight: 700;
+  margin-bottom: 48px;
+}
+
+/* Progress ring */
+
+.progress-ring {
+  width: 160px;
+  height: 160px;
+  border-radius: 50%;
+  background: conic-gradient(#005bff 0deg, #005bff 270deg, #e6e6e6 270deg, #e6e6e6 360deg);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.progress-ring__inner {
+  width: 132px;
+  height: 132px;
+  border-radius: 50%;
+  background: #fff;
+}
+
+/* Controls */
+
+.app__controls {
+  margin-top: 48px;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  align-items: flex-start;
+}
+
+.control {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.control__input {
+  width: 48px;
+  height: 32px;
+  border: 2px solid #005bff;
+  border-radius: 18px;
+  text-align: center;
+  font-size: 14px;
+  font-weight: 600;
+  color: #333;
+  outline: none;
+  -moz-appearance: textfield;
+}
+
+.control__input::-webkit-outer-spin-button,
+.control__input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+.control__label {
+  font-size: 14px;
+  font-weight: 500;
+  color: #333;
+}
+
+/* Toggle switch */
+
+.control__switch {
+  position: relative;
+  display: inline-block;
+  width: 48px;
+  height: 28px;
+  cursor: pointer;
+}
+
+.control__checkbox {
+  opacity: 0;
+  width: 0;
+  height: 0;
+  position: absolute;
+}
+
+.control__slider {
+  position: absolute;
+  inset: 0;
+  background-color: #e0e0e0;
+  border-radius: 14px;
+  transition: background-color 0.2s;
+}
+
+.control__slider::before {
+  content: '';
+  position: absolute;
+  height: 22px;
+  width: 22px;
+  left: 3px;
+  bottom: 3px;
+  background-color: #fff;
+  border-radius: 50%;
+  transition: transform 0.2s;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.15);
+}
+
+.control__checkbox:checked + .control__slider {
+  background-color: #005bff;
+}
+
+.control__checkbox:checked + .control__slider::before {
+  transform: translateX(20px);
 }

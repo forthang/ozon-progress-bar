@@ -2,12 +2,15 @@
 <html lang="ru">
   <head>
     <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>OzonIntership</title>
   </head>
   <body>
     <div class="app" id="app">
-      <h1 class="app__title">Progress</h1> 
-      <div class="app__progress" id="progress-container"></div>
+      <h1 class="app__title">Progress</h1>
+      <div class="progress-ring" id="progress-container">
+        <div class="progress-ring__inner"></div>
+      </div>
       <div class="app__controls">
         <div class="control">
           <input
@@ -42,7 +45,6 @@
           </label>
           <span class="control__label">Hide</span>
         </div>
-
       </div>
     </div>
   </body>
